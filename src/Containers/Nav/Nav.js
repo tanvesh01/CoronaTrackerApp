@@ -12,6 +12,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
 import EqualizerRoundedIcon from "@material-ui/icons/EqualizerRounded";
+import GlobalChart from "../Chart/Global";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -61,13 +62,16 @@ function PermanentDrawerLeft(props) {
             <ListItemIcon>
               <EqualizerRoundedIcon />
             </ListItemIcon>
-            <ListItemText primary="Chart" />
+            <ListItemText primary="India" />
           </ListItem>
         </List>
         <Divider />
       </Drawer>
+      {/* ================= MAIN STARTS HERE ====================== */}
+      {/* ================= MAIN STARTS HERE ====================== */}
       <main className={classes.content}>
         <Switch>
+          <Route path="/globalChart" exact component={GlobalChart} />
           <Route path="/chart" exact component={Chart} />
           <Route path="/" component={Home} />
         </Switch>

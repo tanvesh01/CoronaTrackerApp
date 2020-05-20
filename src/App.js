@@ -12,3 +12,4 @@ function App() {
 }
 
 export default App;
+// * 1.india 2. top countries 3. global history
