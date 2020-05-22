@@ -9,7 +9,6 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-
 import MenuIcon from "@material-ui/icons/Menu";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
@@ -26,11 +25,15 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
     root: {
         display: "flex",
+        position: "relative",
+        backgroundColor: "#e6e6e6",
     },
     drawer: {
         width: drawerWidth,
+        position: "absolute",
         flexShrink: 0,
         [theme.breakpoints.up("sm")]: {
+            position: "relative",
             width: drawerWidth,
             flexShrink: 0,
         },
@@ -149,7 +152,7 @@ function ResponsiveDrawer(props) {
                 </Hidden>
             </nav>
             <main className={classes.content}>
-                <Toolbar />
+                <div className={classes.toolbar} />
                 <Switch>
                     <Route path="/globalChart" exact component={GlobalChart} />
                     <Route path="/chart" exact component={Chart} />
