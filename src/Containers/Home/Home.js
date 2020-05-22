@@ -26,11 +26,13 @@ class Home extends Component {
   render() {
     return (
       <React.Fragment>
-        <Grid
-          confirmed={this.state.confirmed}
-          deaths={this.state.deaths}
-          recovered={this.state.recovered}
-        />
+        <div>
+          <Grid
+            confirmed={this.state.confirmed}
+            deaths={this.state.deaths}
+            recovered={this.state.recovered}
+          />
+        </div>
       </React.Fragment>
     );
   }

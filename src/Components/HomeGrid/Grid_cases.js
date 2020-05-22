@@ -21,14 +21,14 @@ export default function CenteredGrid(props) {
   const yellow = "yellow";
   return (
     <div className={classes.root}>
-      <Grid container spacing={6}>
-        <Grid item xs={4}>
+      <Grid container spacing={4}>
+        <Grid item xs={12} lg={4}>
           <Confirmed content={props.confirmed} color={yellow} />
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} lg={4}>
           <Confirmed content={props.recovered} color={green} />
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} lg={4}>
           <Confirmed content={props.deaths} color={red} />
         </Grid>
       </Grid>

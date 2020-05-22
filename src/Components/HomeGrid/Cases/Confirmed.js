@@ -11,9 +11,12 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    borderRadius: "1rem",
+    boxShadow: "0px 44px 28px -26px rgba(148,148,148,1)",
   },
   media: {
     height: 140,
+
     backgroundColor: (props) => props.color,
   },
 });
