@@ -5,7 +5,6 @@ class Home extends Component {
         confirmed: null,
         deaths: null,
         recovered: null,
-        screen: "potrait",
     };
 
     componentDidMount() {
