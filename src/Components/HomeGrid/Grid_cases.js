@@ -13,13 +13,17 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center"
   },
   landing: {
+    overflow: "hidden",
     display: "flex",
-    height: "20.2rem",
+    height: "22rem",
     marginBottom: theme.spacing(4),
     backgroundColor: "white",
     borderRadius: "1rem",
     fontFamily: theme.typography.fontFamily,
-    paddingBottom: "10px"
+    paddingBottom: "10px",
+    [theme.breakpoints.down("xs")]: {
+      height: "23rem"
+    }
   },
   paper: {
     padding: theme.spacing(2),
