@@ -11,7 +11,6 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import MenuIcon from "@material-ui/icons/Menu";
 import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Home from "../Home/Home";
 import Chart from "../Chart/Chart";
@@ -19,6 +18,7 @@ import { Route, Switch, Link } from "react-router-dom";
 import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
 import EqualizerRoundedIcon from "@material-ui/icons/EqualizerRounded";
 import GlobalChart from "../Chart/Global";
+import Footer from "../../Components/Footer/Footer";
 
 const drawerWidth = 240;
 
@@ -39,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     appBar: {
+        backgroundColor: "white",
         zIndex: theme.zIndex.drawer + 1,
         [theme.breakpoints.up("sm")]: {
             width: `calc(100% - ${drawerWidth}px)`,
@@ -46,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     menuButton: {
+        backgroundColor: "black",
         marginRight: theme.spacing(2),
         [theme.breakpoints.up("sm")]: {
             display: "none",
@@ -115,9 +117,9 @@ function ResponsiveDrawer(props) {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" noWrap>
+                    {/* <Typography variant="h6" noWrap>
                         Responsive drawer
-                    </Typography>
+                    </Typography> */}
                 </Toolbar>
             </AppBar>
             <nav className={classes.drawer} aria-label="mailbox folders">
@@ -158,6 +160,7 @@ function ResponsiveDrawer(props) {
                     <Route path="/chart" exact component={Chart} />
                     <Route path="/" component={Home} />
                 </Switch>
+                <Footer />
             </main>
         </div>
     );

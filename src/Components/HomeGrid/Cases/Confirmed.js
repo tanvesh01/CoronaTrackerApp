@@ -40,8 +40,7 @@ export default function MediaCard(props) {
                 />
                 <CardContent>
                     <Typography variant="body2" color="textSecondary" className={classes.para}>
-                        Lizards are a widespread group of squamate reptiles, with over 6,000
-                        species, ranging across all continents except Antarctica
+                        {props.para}
                     </Typography>
                     <Typography variant="h5" component="h2">
                         {props.content}

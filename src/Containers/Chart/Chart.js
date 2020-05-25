@@ -65,7 +65,7 @@ class India extends Component {
 				},
 			],
 		};
-		let chart = <Bar key="1" data={data} options={{ responsive: true }} />;
+		let chart = <Bar key="1" data={data} options={{ responsive: true, }} />;
 		if (window.matchMedia("(orientation: portrait)").matches) {
 			chart = (
 				<Typography gutterBottom variant="h5" component="h2">
