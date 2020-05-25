@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   landing: {
     display: "flex",
-    height: "20rem",
+    height: "20.2rem",
     marginBottom: theme.spacing(4),
     backgroundColor: "white",
     borderRadius: "1rem",
@@ -29,8 +29,6 @@ const useStyles = makeStyles((theme) => ({
   sub: {
     fontSize: "1.5rem",
     padding: "0.5rem 1rem 0.1rem 1.5rem",
-    // backgroundColor: "black",
-    // color: "white",
     [theme.breakpoints.down("sm")]: {
       fontSize: "1rem",
     },
