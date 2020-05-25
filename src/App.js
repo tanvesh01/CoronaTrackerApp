@@ -1,13 +1,19 @@
 import React from "react";
 import Nav from "./Containers/Nav/Nav";
+import { ThemeProvider } from '@material-ui/core/styles'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import theme from "./theme";
 
-import "./App.css";
+//import "./App.css";
 
 function App() {
   return (
-    <div>
-      <Nav />
-    </div>
+    <ThemeProvider theme={theme} >
+      <CssBaseline />
+      <div>
+        <Nav />
+      </div>
+    </ThemeProvider>
   );
 }
 

@@ -3,21 +3,20 @@ import Typography from "@material-ui/core/Typography";
 import { Bar } from "react-chartjs-2";
 
 class India extends Component {
+
 	state = {
 		confirmed: null,
 		deaths: null,
 		recovered: null,
-		screen: null,
+
 	};
 
 	setScreenOrientation = () => {
 		if (window.matchMedia("(orientation: portrait)").matches) {
-			console.log("orientation: portrait");
 			this.setState({
 				screen: "portrait",
 			});
 		} else if (window.matchMedia("(orientation: landscape)").matches) {
-			console.log("orientation: landscape");
 			this.setState({
 				screen: "landscape",
 			});
@@ -25,7 +24,7 @@ class India extends Component {
 	};
 
 	async componentDidMount() {
-		window.addEventListener("resize", this.setScreenOrientation);
+		//window.addEventListener("resize", this.setScreenOrientation);
 		try {
 			const res = await fetch("https://covid19.mathdro.id/api/countries/IN");
 			if (!res.ok) {
@@ -47,7 +46,7 @@ class India extends Component {
 	}
 
 	render() {
-		console.log(this.state.screen + "===");
+		window.addEventListener("resize", this.setScreenOrientation);
 		const numbers = [];
 		for (let x in this.state) {
 			numbers.push(this.state[x]);
@@ -58,17 +57,16 @@ class India extends Component {
 				{
 
 					label: "No. of people",
-					backgroundColor: ["#c9b200", "red", "green"],
-					borderColor: "rgba(255,99,132,1)",
+					backgroundColor: ["#fff7006e", "#de3936bf", "#41d663b3"],
+					borderColor: ["#e0c03d", "#db3735", "#069f58"],
 					borderWidth: 3,
-					hoverBackgroundColor: "black",
 					hoverBorderColor: "white",
 					data: numbers,
 				},
 			],
 		};
 		let chart = <Bar key="1" data={data} options={{ responsive: true }} />;
-		if (this.state.screen === "portrait") {
+		if (window.matchMedia("(orientation: portrait)").matches) {
 			chart = (
 				<Typography gutterBottom variant="h5" component="h2">
 					Please Rotate your device!

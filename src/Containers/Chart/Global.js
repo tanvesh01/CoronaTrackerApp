@@ -7,16 +7,13 @@ class GlobalChart extends Component {
     numbers: [],
     time: [],
     deaths: [],
-    screen: null,
   };
   setScreenOrientation = () => {
     if (window.matchMedia("(orientation: portrait)").matches) {
-      console.log("orientation: portrait");
       this.setState({
         screen: "portrait",
       });
     } else if (window.matchMedia("(orientation: landscape)").matches) {
-      console.log("orientation: landscape");
       this.setState({
         screen: "landscape",
       });
@@ -55,10 +52,9 @@ class GlobalChart extends Component {
       datasets: [
         {
           label: "Confirmed",
-          fill: false,
-          lineTension: 3,
-          //backgroundColor: "",
-          borderColor: "#ffda0099",
+          fill: true,
+          backgroundColor: "#fff7001f",
+          borderColor: "#e0c03d",
           // borderCapStyle: "butt",
           // borderDash: [],
           // borderDashOffset: 0.0,
@@ -76,7 +72,8 @@ class GlobalChart extends Component {
         },
         {
           label: "Deaths",
-          fill: false,
+          fill: true,
+          backgroundColor: "#de3936bf",
           borderColor: "#ff00008f",
           pointBorderColor: "rgba(75,192,192,0)",
           // pointBackgroundColor: "black",
@@ -102,7 +99,7 @@ class GlobalChart extends Component {
         },
       }}
     />;
-    if (this.state.screen === "portrait") {
+    if (window.matchMedia("(orientation: portrait)").matches) {
       chart = <Typography gutterBottom variant="h5" component="h2">
         Please Rotate your device!
                 </Typography>;
