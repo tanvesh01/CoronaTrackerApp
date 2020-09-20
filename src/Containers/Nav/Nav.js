@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         display: "flex",
         position: "relative",
-        backgroundColor: "#e6e6e6",
+        backgroundColor: "white",
     },
     drawer: {
         width: drawerWidth,
@@ -106,7 +106,7 @@ function ResponsiveDrawer(props) {
     return (
         <div className={classes.root}>
             <CssBaseline />
-            <AppBar position="fixed" className={classes.appBar}>
+            <AppBar elevation={1} position="fixed" className={classes.appBar}>
                 <Toolbar>
                     <IconButton
                         color="inherit"

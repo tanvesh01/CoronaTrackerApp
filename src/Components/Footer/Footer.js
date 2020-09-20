@@ -17,10 +17,7 @@ function Copyright() {
             color="textSecondary"
         >
             {"Copyright © "}
-            <Link color="inherit" href="https://material-ui.com/">
-                Corona Tracker App
-            </Link>{" "}
-            {new Date().getFullYear()}
+            <Link color="inherit">Corona Tracker App</Link> {new Date().getFullYear()}
             {"."}
         </Typography>
     );

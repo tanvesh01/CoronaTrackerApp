@@ -6,15 +6,14 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
     root: {
         maxWidth: 345,
         fontFamily: theme.typography.fontFamily,
         borderRadius: "1rem",
-        boxShadow: "0px 44px 28px -26px rgba(148,148,148,1)",
+        boxShadow: "0px 11px 20px -3px rgb(148 148 148 / 66%);",
 
-        background: "linear-gradient(0deg, rgba(250,225,120,1) 61%, rgba(255,240,176,1) 100%),"
-
+        background: "linear-gradient(0deg, rgba(250,225,120,1) 61%, rgba(255,240,176,1) 100%),",
     },
     media: {
         height: 300,
@@ -24,8 +23,8 @@ const useStyles = makeStyles(theme => ({
     },
     para: {
         marginBottom: "10px",
-        fontSize: "1rem"
-    }
+        fontSize: "1rem",
+    },
 }));
 
 export default function MediaCard(props) {
@@ -49,9 +48,8 @@ export default function MediaCard(props) {
                             Humans
                         </Typography>
                     </Typography>
-
                 </CardContent>
             </CardActionArea>
-        </Card >
+        </Card>
     );
 }
