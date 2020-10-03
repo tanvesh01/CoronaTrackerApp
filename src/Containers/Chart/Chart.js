@@ -31,7 +31,7 @@ class India extends Component {
         throw Error(res.statusText);
       }
       const data = await res.json();
-      console.log(data);
+
       const confirmed = data.cases;
       const recovered = data.recovered;
       const deaths = data.deaths;

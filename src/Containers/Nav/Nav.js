@@ -91,7 +91,7 @@ function ResponsiveDrawer(props) {
           </ListItemIcon>
           <ListItemText primary="India" />
         </ListItem>
-        <ListItem button component={Link} to="/globalChart" key="Ghobal Chart">
+        <ListItem button component={Link} to="/globalChart" key="Global Chart">
           <ListItemIcon>
             <EqualizerRoundedIcon />
           </ListItemIcon>
